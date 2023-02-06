@@ -24,7 +24,7 @@ body {
     right: 0;
 }
 
-.wrapper {
+.header-wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -53,7 +53,7 @@ body {
 }
 
 .banner-bg {
-    width: 85vw;
+    width: 80vw;
     height: 100vh;
     background-image: linear-gradient(
             180deg,
@@ -90,16 +90,14 @@ body {
     transition: 0.7s;
 }
 
-.posts {
+.wrapper {
     width: 80vw;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
 }
 
-.posts-wrapper {
-    display: flex;
-    flex-direction: column;
-    margin: 30px;
+.posts {
+    margin-top: 20px;
 }
 
 .post-card {
@@ -125,22 +123,15 @@ body {
     text-align: justify;
 }
 
-.popular-posts, h2{
-    width: 80vw;
-    margin: 0 auto;
-    padding-left: 30px;
-}
-
-.popular-posts-wrapper {
+.popular-posts-card {
     display: flex;
     flex-direction: row;
-    
 }
 
 .popular-post-card {
     width: 20vw;
     margin-top: 20px;
-    padding-left: 40px;
+    padding: 10px;
 }
 
 .popular-post-card img {
