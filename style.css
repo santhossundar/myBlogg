@@ -1,7 +1,10 @@
 :root {
-    --primary-dark: #0D1B2A;
-    --primary-light: #778DA9;
-    --text: #E0E1DD;
+    --primary-dark: #0d1b2a;
+    --primary-light: #778da9;
+    --text: #e0e1dd;
+    --button: rgb(87, 131, 219, 0.7);
+    --button-hover: rgb(87, 131, 219, 1);
+    --button-text: rgb(206, 209, 214);
 }
 
 * {
@@ -41,4 +44,47 @@ body {
 .top-fixed-nav ul > li {
     padding: 10px;
     color: var(--text);
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+.banner-bg {
+    width: 90vw;
+    height: 100vh;
+    background-image: linear-gradient(
+            180deg,
+            rgba(13, 27, 42, 1) 50%,
+            rgba(13, 27, 42, 0.7) 100%,
+            rgba(13, 27, 42, 0) 100%
+        ),
+        url("images/banner.jpg");
+    background-size: cover;
+    color: var(--text);
+}
+
+.banner-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.banner-intro button {
+    background-color: var(--button);
+    font-weight: bold;
+    color: var(--button-text);
+    cursor: pointer;
+    border: none;
+    border-radius: 18px;
+    margin-top: 15px;
+    padding: 10px 15px;
+}
+
+.banner-intro button:hover {
+    background-color: var(--button-hover);
+    transition: 0.7s;
 }
