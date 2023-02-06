@@ -16,6 +16,7 @@
 body {
     font-family: roboto, sans-serif;
 }
+
 .header {
     position: fixed;
     background-color: var(--primary-dark);
@@ -120,5 +121,35 @@ body {
 }
 
 .post-body {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.popular-posts, h2{
+    width: 80vw;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.popular-posts-wrapper {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.popular-post-card {
+    width: 20vw;
+    margin-top: 20px;
+    padding-left: 40px;
+}
+
+.popular-post-card img {
+    width: 100%;
+    height: 30vh;
+}
+
+.popular-post-title {
+    font-weight: bold;
+    text-align: center;
     margin-top: 10px;
 }
