@@ -53,7 +53,7 @@ body {
 }
 
 .banner-bg {
-    width: 80vw;
+    width: 75vw;
     height: 100vh;
     background-image: linear-gradient(
             180deg,
@@ -91,7 +91,7 @@ body {
 }
 
 .wrapper {
-    width: 80vw;
+    width: 65vw;
     margin: 0 auto;
     padding: 10px;
 }
@@ -143,4 +143,43 @@ body {
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
+}
+
+.contact {
+    padding: 20px;
+}
+
+.contact .wrapper {
+    border: 2px solid;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.contact form input[type="text"],
+.contact form textarea {
+    padding: 9px;
+    margin: 5px 5px;
+    font-family: roboto, sans-serif;
+}
+
+.contact form button {
+    width: 120px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    background-color: var(--button);
+    border-radius: 10px;
+    margin: 10px 6px;
+    color: var(--button-text);
+}
+
+.contact form button:hover {
+    cursor: pointer;
+    background-color: var(--button-hover);
+    color: var(--button-text);
+    transition: .7s;
 }
