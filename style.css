@@ -69,6 +69,10 @@ body {
     visibility: hidden;
 }
 
+.mobile-menu-list {
+    visibility: hidden;
+}
+
 .banner {
     display: flex;
     justify-content: center;
@@ -346,6 +350,46 @@ body {
 
     .mobile-menu-icon {
         visibility: visible;
+        cursor: pointer;
+    }
+
+    .mobile-menu-list {
+        visibility: visible;
+        position: absolute;
+        background-image: linear-gradient(
+                180deg,
+                rgba(13, 27, 42, 1) 50%,
+                rgba(13, 27, 42, 0.7) 100%,
+                rgba(13, 27, 42, 0) 100%
+            ),
+            url("images/banner.jpg");
+        background-size: cover;
+        color: var(--text);
+        z-index: 99;
+        top: 50px;
+        left: 0;
+        right: 0;
+        height: auto;
+    }
+
+    .mobile-menu-list ul {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40%;
+        font-weight: bold;
+        font-size: 14pt;
+    }
+
+    .mobile-menu-list ul > li {
+        padding: 10px;
+    }
+
+    .mobile-menu-list a {
+        text-decoration: none;
+        color: var(--text);
         cursor: pointer;
     }
 
