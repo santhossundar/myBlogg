@@ -66,10 +66,12 @@ body {
 }
 
 .mobile-menu-icon {
+    position: absolute;
     visibility: hidden;
 }
 
 .mobile-menu-list {
+    position: absolute;
     visibility: hidden;
 }
 
@@ -349,8 +351,10 @@ body {
     }
 
     .mobile-menu-icon {
+        position: absolute;
         visibility: visible;
         cursor: pointer;
+        right: 10px;
     }
 
     .mobile-menu-list {
@@ -365,7 +369,6 @@ body {
             url("images/banner.jpg");
         background-size: cover;
         color: var(--text);
-        z-index: 99;
         top: 50px;
         left: 0;
         right: 0;
