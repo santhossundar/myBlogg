@@ -22,6 +22,7 @@ body {
     background-color: var(--primary-dark);
     left: 0;
     right: 0;
+    z-index: 100;
 }
 
 .header-wrapper {
@@ -44,7 +45,23 @@ body {
 
 .top-fixed-nav ul > li {
     padding: 10px;
+}
+
+.top-fixed-nav ul > li:hover {
+    background-color: var(--button-hover);
+    color: var(--button-text);
+    border-radius: 7px;
+    transition: 0.7s;
+}
+
+.top-fixed-nav a {
+    text-decoration: none;
     color: var(--text);
+    cursor: pointer;
+}
+
+.search-bar {
+    cursor: pointer;
 }
 
 .banner {
@@ -103,6 +120,12 @@ body {
 .post-card {
     width: 100%;
     padding: 20px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 12px;
+    cursor: pointer;
 }
 
 .post-thumbnail img {
@@ -111,27 +134,85 @@ body {
 }
 
 .post-title {
+    font-size: 16pt;
     margin-top: 20px;
 }
 
 .post-meta {
-    padding: 10px;
+    display: inline-block;
+    background-color: var(--primary-dark);
+    color: var(--text);
+    font-size: 10pt;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 6px 10px;
 }
 
 .post-body {
+    position: relative;
     margin-top: 10px;
     text-align: justify;
+    height: 100px;
+    overflow: hidden;
+}
+
+.post-body::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    height: 50px;
+    width: 100%;
+    background: white;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 48%,
+        rgba(255, 255, 255, 0.7) 77%,
+        rgba(236, 252, 255, 0) 100%
+    );
+}
+
+.post-body .btn-readmore {
+    position: absolute;
+    bottom: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.post-body .btn-readmore button {
+    width: 92px;
+    height: 30px;
+    color: var(--button-text);
+    background-color: var(--primary-light);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.post-body .btn-readmore button:hover {
+    background-color: var(--primary-dark);
+    transition: .7s;
 }
 
 .popular-posts-card {
     display: flex;
     flex-direction: row;
+    padding: 10px;
 }
 
 .popular-post-card {
     width: 20vw;
-    margin-top: 20px;
-    padding: 10px;
+    margin: 15px 7px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
 }
 
 .popular-post-card img {
@@ -151,6 +232,10 @@ body {
 
 .contact .wrapper {
     border: 2px solid;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
 }
 
 .contact form {
@@ -164,23 +249,28 @@ body {
     padding: 9px;
     margin: 5px 5px;
     font-family: roboto, sans-serif;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    resize: none;
 }
 
 .contact form button {
     width: 120px;
     height: 30px;
-    border: 0;
-    cursor: pointer;
     background-color: var(--button);
-    border-radius: 10px;
     margin: 10px 6px;
     color: var(--button-text);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
 .contact form button:hover {
-    cursor: pointer;
     background-color: var(--button-hover);
-    color: var(--button-text);
     transition: .7s;
 }
 
@@ -209,7 +299,7 @@ body {
     margin-top: 20px;
 }
 
-.footer-container .quick-links ul{
+.footer-container .quick-links ul {
     list-style-type: none;
     margin-top: 20px;
 }
