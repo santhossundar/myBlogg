@@ -358,7 +358,7 @@ body {
     }
 
     .mobile-menu-list {
-        visibility: visible;
+        visibility: hidden;
         position: absolute;
         background-image: linear-gradient(
                 180deg,
