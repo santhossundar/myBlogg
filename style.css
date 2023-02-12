@@ -62,7 +62,36 @@ body {
 }
 
 .search-bar {
+    display: flex;
+}
+
+.search-bar .search-icon {
     cursor: pointer;
+    transform: translateX(100%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        background-color 0;
+}
+
+.search-bar:hover .search-icon {
+    background-color: white;
+    border-radius: 5px;
+    color: var(--primary-dark);    
+    transform: translateX(100%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.search-bar input {
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    outline: none;
+    display: none;
+}
+
+.search-bar:hover input {
+    display: inline-block;  
+    transform: translateX(22%);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .mobile-menu-icon {
